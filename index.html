@@ -1,13 +1,101 @@
 <!doctype html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Music History</title>
-</head>
 
-<body>
+	<head>
+	  <meta charset="utf-8">
+	  <title>Music History</title>
+	  <link rel="stylesheet" type="text/css" href="css/styles.css">
+	</head>
+
+	<body>
+		<header>
+			<div id="navcontainer">
+				<nav>
+					<ul>
+						<a href="#" alt=><li>View Music |</li></a>
+						<a href="#" alt=><li>Add Music |</li></a>
+						<a href="#" alt><li>Profile</li></a>
+					</ul>
+				</nav>
+			</div>	
+		</header>
+
+		<div id="main_container">
+			<div id="sideoptions">
+				<section>
+					<h4>Song Length:</h4>
+					<form>
+					  <input type="range" name="points" min="0" max="10">
+					</form>
+					
+					<h4>Artist:</h4>
+					<select>
+					  <option value="Royal Canoe">Royal Canoe</option>
+					  <option value="Foxy Shazam">Foxy Shazam</option>
+					  <option value="Phox">Phox</option>
+					  <option value="Sainseneca">Saintseneca</option>
+					  <option value="Queen">Queen</option>
+					</select>
+				</section>	
+
+				<h4>Album:</h4>
+				<select>
+				<option value="Today We're Believers">Today We're Believers</option>
+				<option value="Foxy Shazam">Foxy Shazam</option>
+				<option value="Phox">Phox</option>
+				<option value="Such Things">Such Things</option>
+				<option value="Hot Space">Hot Space</option>
+				</select>
+
+				<h4>Genre</h4>
+				<form>
+					  <input class="genreselect" type="radio" name="Rock" value="Rock" checked>Rock<br>
+					  <input class="genreselect" type="radio" name="Classical" value="Classical">Classical<br>
+					  <input class="genreselect" type="radio" name="Pop" value="Pop">Pop
+					  <input class="genreselect" type="radio" name="Jazz" value="Jazz">Jazz
+					  <input class="genreselect" type="radio" name="Blues" value="Blues">Blues
+					  <input class="genreselect" type="radio" name="Pop" value="Hip Hop">Hip Hop
+				</form>
+
+				<input type="submit" name="Filter" value="Filter">
+			</div>
 
 
-</body>
+			<div id="mdisplay">
+				<main>
+					<!-- <audio controls>
+					  <source src="/Users/joeykirby/Music/iTunes/iTunes Media/Music/Harmon/Harmon EP/02 Curiosity Killed the Cat.mp3" type="audio/mpeg">
+					  Your browser does not support the audio tag.
+					</audio> -->
+					<ul>
+						<li><h2>Exodus of the Year</h2>
+						<a href="#"><h5>Artist name |</h5></a>
+						<a href="#"><h5>Album name |</h5></a>
+						<a href="#"><h5>Genre</h5></a></li>
+
+						<li><h2>Unstoppable</h2>
+						<a href="#"><h5>Artist name |</h5></a>
+						<a href="#"><h5>Album name |</h5></a>
+						<a href="#"><h5>Genre</h5></a></li>
+
+						<li><h2>1936</h2>
+						<a href="#"><h5>Artist name |</h5></a>
+						<a href="#"><h5>Album name |</h5></a>
+						<a href="#"><h5>Genre</h5></a></li>
+
+						<li><h2>Bad Ideas</h2>
+						<a href="#"><h5>Artist name |</h5></a>
+						<a href="#"><h5>Album name |</h5></a>
+						<a href="#"><h5>Genre</h5></a></li>
+
+						<li><h2>Pressure</h2>
+						<a href="#"><h5>Artist name |</h5></a>
+						<a href="#"><h5>Album name |</h5></a>
+						<a href="#"><h5>Genre</h5></a></li>
+					</ul>
+				</main>
+			</div>
+		</div>
+	</body>
 </html>
