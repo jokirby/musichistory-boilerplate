@@ -21,81 +21,83 @@
 			</div>	
 		</header>
 
-		<div id="main_container">
-			<div id="sideoptions">
-				<section>
-					<h4>Song Length:</h4>
-					<form>
-					  <input type="range" name="points" min="0" max="10">
-					</form>
-					
-					<h4>Artist:</h4>
+			<div id="main_container">
+				<div id="sideoptions">
+					<section>
+						<h4>Song Length:</h4>
+						<form>
+						  <input type="range" name="points" min="0" max="10">
+						</form>
+						
+						<h4>Artist:</h4>
+						<select>
+						  <option value="Royal Canoe">Royal Canoe</option>
+						  <option value="Foxy Shazam">Foxy Shazam</option>
+						  <option value="Phox">Phox</option>
+						  <option value="Saintseneca">Saintseneca</option>
+						  <option value="Queen">Queen</option>
+						</select>
+					</section>	
+
+					<h4>Album:</h4>
 					<select>
-					  <option value="Royal Canoe">Royal Canoe</option>
-					  <option value="Foxy Shazam">Foxy Shazam</option>
-					  <option value="Phox">Phox</option>
-					  <option value="Sainseneca">Saintseneca</option>
-					  <option value="Queen">Queen</option>
+					<option value="Today We're Believers">Today We're Believers</option>
+					<option value="Foxy Shazam">Foxy Shazam</option>
+					<option value="Phox">Phox</option>
+					<option value="Such Things">Such Things</option>
+					<option value="Hot Space">Hot Space</option>
 					</select>
-				</section>	
 
-				<h4>Album:</h4>
-				<select>
-				<option value="Today We're Believers">Today We're Believers</option>
-				<option value="Foxy Shazam">Foxy Shazam</option>
-				<option value="Phox">Phox</option>
-				<option value="Such Things">Such Things</option>
-				<option value="Hot Space">Hot Space</option>
-				</select>
+					<h4>Genre</h4>
+					<form id="formconatiner">
+						<div id="row1">
+						  <input class="genreselect" type="radio" name="genre" value="Rock" checked>Rock<br>
+						  <input class="genreselect" type="radio" name="genre" value="Classical">Classical<br>
+						  <input class="genreselect" type="radio" name="genre" value="Pop">Pop
+						</div>
 
-				<h4>Genre</h4>
-				<form>
-					  <input class="genreselect" type="radio" name="Rock" value="Rock" checked>Rock<br>
-					  <input class="genreselect" type="radio" name="Classical" value="Classical">Classical<br>
-					  <input class="genreselect" type="radio" name="Pop" value="Pop">Pop
-					  <input class="genreselect" type="radio" name="Jazz" value="Jazz">Jazz
-					  <input class="genreselect" type="radio" name="Blues" value="Blues">Blues
-					  <input class="genreselect" type="radio" name="Pop" value="Hip Hop">Hip Hop
-				</form>
+						 <div id="row2">
+						  <input class="genreselect" type="radio" name="genre" value="Jazz">Jazz<br>
+						  <input class="genreselect" type="radio" name="genre" value="Blues">Blues<br>
+						  <input class="genreselect" type="radio" name="genre" value="Hip Hop">Hip Hop
+						 </div>
+					</form>
 
-				<input type="submit" name="Filter" value="Filter">
-			</div>
+					<input id="filter-button" type="submit" name="Filter" value="Filter">
+				</div>
 
+				<div id="mdisplay">
+					<main>
+						<ul id="jams"></ul>
+						<!-- <ul>
+							<li><h2>Exodus of the Year</h2>
+							<a href="#"><h5>Artist name |</h5></a>
+							<a href="#"><h5>Album name |</h5></a>
+							<a href="#"><h5>Genre</h5></a></li>
 
-			<div id="mdisplay">
-				<main>
-					<!-- <audio controls>
-					  <source src="/Users/joeykirby/Music/iTunes/iTunes Media/Music/Harmon/Harmon EP/02 Curiosity Killed the Cat.mp3" type="audio/mpeg">
-					  Your browser does not support the audio tag.
-					</audio> -->
-					<ul>
-						<li><h2>Exodus of the Year</h2>
-						<a href="#"><h5>Artist name |</h5></a>
-						<a href="#"><h5>Album name |</h5></a>
-						<a href="#"><h5>Genre</h5></a></li>
+							<li><h2>Unstoppable</h2>
+							<a href="#"><h5>Artist name |</h5></a>
+							<a href="#"><h5>Album name |</h5></a>
+							<a href="#"><h5>Genre</h5></a></li>
 
-						<li><h2>Unstoppable</h2>
-						<a href="#"><h5>Artist name |</h5></a>
-						<a href="#"><h5>Album name |</h5></a>
-						<a href="#"><h5>Genre</h5></a></li>
+							<li><h2>1936</h2>
+							<a href="#"><h5>Artist name |</h5></a>
+							<a href="#"><h5>Album name |</h5></a>
+							<a href="#"><h5>Genre</h5></a></li>
 
-						<li><h2>1936</h2>
-						<a href="#"><h5>Artist name |</h5></a>
-						<a href="#"><h5>Album name |</h5></a>
-						<a href="#"><h5>Genre</h5></a></li>
+							<li><h2>Bad Ideas</h2>
+							<a href="#"><h5>Artist name |</h5></a>
+							<a href="#"><h5>Album name |</h5></a>
+							<a href="#"><h5>Genre</h5></a></li>
 
-						<li><h2>Bad Ideas</h2>
-						<a href="#"><h5>Artist name |</h5></a>
-						<a href="#"><h5>Album name |</h5></a>
-						<a href="#"><h5>Genre</h5></a></li>
-
-						<li><h2>Pressure</h2>
-						<a href="#"><h5>Artist name |</h5></a>
-						<a href="#"><h5>Album name |</h5></a>
-						<a href="#"><h5>Genre</h5></a></li>
-					</ul>
-				</main>
-			</div>
+							<li><h2>Pressure</h2>
+							<a href="#"><h5>Artist name |</h5></a>
+							<a href="#"><h5>Album name |</h5></a>
+							<a href="#"><h5>Genre</h5></a></li>
+						</ul> -->
+					</main>
+				</div>
 		</div>
+	<script type="text/javascript" src="songs.js"></script>
 	</body>
 </html>
