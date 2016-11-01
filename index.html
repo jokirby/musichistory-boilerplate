@@ -1,103 +1,93 @@
-<!doctype html>
-
-<html lang="en">
-
+<!DOCTYPE html>
+<html>
+	
 	<head>
-	  <meta charset="utf-8">
-	  <title>Music History</title>
-	  <link rel="stylesheet" type="text/css" href="css/styles.css">
+		<meta charset="utf-8">
+		<title>Music History</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
 	</head>
-
-	<body>
+	
+	<body onload="toDom();">
 		<header>
 			<div id="navcontainer">
 				<nav>
 					<ul>
-						<a href="#" alt=><li>View Music |</li></a>
-						<a href="#" alt=><li>Add Music |</li></a>
-						<a href="#" alt><li>Profile</li></a>
+						<a href="#" id="link-home" alt="Home Link"><li>List Music | </li></a>
+						<a href="#" id="link-add" alt="Add Link"><li>Add Music |</li></a>
+						<a href="#" id="link-profile" alt="Profile Link"><li>Profile</li></a>
 					</ul>
 				</nav>
-			</div>	
+			</div>
 		</header>
-
-			<div id="main_container">
+		
+		<div id="main-container">
+			<section id="list-music-view" class="visible">
 				<div id="sideoptions">
-					<section>
-						<h4>Song Length:</h4>
-						<form>
-						  <input type="range" name="points" min="0" max="10">
-						</form>
-						
-						<h4>Artist:</h4>
-						<select>
-						  <option value="Royal Canoe">Royal Canoe</option>
-						  <option value="Foxy Shazam">Foxy Shazam</option>
-						  <option value="Phox">Phox</option>
-						  <option value="Saintseneca">Saintseneca</option>
-						  <option value="Queen">Queen</option>
-						</select>
-					</section>	
-
+					
+					<h4>Song Length:</h4>
+					<form>
+						<input type="range" name="points" min="0" max="10">
+					</form>
+					
+					<h4>Artist:</h4>
+					<select>
+						<option value="Royal Canoe">Royal Canoe</option>
+						<option value="Foxy Shazam">Foxy Shazam</option>
+						<option value="Phox">Phox</option>
+						<option value="Saintseneca">Saintseneca</option>
+						<option value="Queen">Queen</option>
+					</select>
+					
 					<h4>Album:</h4>
 					<select>
-					<option value="Today We're Believers">Today We're Believers</option>
-					<option value="Foxy Shazam">Foxy Shazam</option>
-					<option value="Phox">Phox</option>
-					<option value="Such Things">Such Things</option>
-					<option value="Hot Space">Hot Space</option>
+						<option value="Today We're Believers">Today We're Believers</option>
+						<option value="Foxy Shazam">Foxy Shazam</option>
+						<option value="Phox">Phox</option>
+						<option value="Such Things">Such Things</option>
+						<option value="Hot Space">Hot Space</option>
 					</select>
-
+					
 					<h4>Genre</h4>
 					<form id="formconatiner">
 						<div id="row1">
-						  <input class="genreselect" type="radio" name="genre" value="Rock" checked>Rock<br>
-						  <input class="genreselect" type="radio" name="genre" value="Classical">Classical<br>
-						  <input class="genreselect" type="radio" name="genre" value="Pop">Pop
+							<input class="genreselect" type="radio" name="genre" value="Rock" checked>Rock<br>
+							<input class="genreselect" type="radio" name="genre" value="Classical">Classical<br>
+							<input class="genreselect" type="radio" name="genre" value="Pop">Pop
 						</div>
-
-						 <div id="row2">
-						  <input class="genreselect" type="radio" name="genre" value="Jazz">Jazz<br>
-						  <input class="genreselect" type="radio" name="genre" value="Blues">Blues<br>
-						  <input class="genreselect" type="radio" name="genre" value="Hip Hop">Hip Hop
-						 </div>
+						
+						<div id="row2">
+							<input class="genreselect" type="radio" name="genre" value="Jazz">Jazz<br>
+							<input class="genreselect" type="radio" name="genre" value="Blues">Blues<br>
+							<input class="genreselect" type="radio" name="genre" value="Hip Hop">Hip Hop
+						</div>
 					</form>
-
+					
 					<input id="filter-button" type="submit" name="Filter" value="Filter">
-				</div>
-
+				</div> <!-- side option closing tag -->
+				
 				<div id="mdisplay">
 					<main>
-						<ul id="jams"></ul>
-						<!-- <ul>
-							<li><h2>Exodus of the Year</h2>
-							<a href="#"><h5>Artist name |</h5></a>
-							<a href="#"><h5>Album name |</h5></a>
-							<a href="#"><h5>Genre</h5></a></li>
-
-							<li><h2>Unstoppable</h2>
-							<a href="#"><h5>Artist name |</h5></a>
-							<a href="#"><h5>Album name |</h5></a>
-							<a href="#"><h5>Genre</h5></a></li>
-
-							<li><h2>1936</h2>
-							<a href="#"><h5>Artist name |</h5></a>
-							<a href="#"><h5>Album name |</h5></a>
-							<a href="#"><h5>Genre</h5></a></li>
-
-							<li><h2>Bad Ideas</h2>
-							<a href="#"><h5>Artist name |</h5></a>
-							<a href="#"><h5>Album name |</h5></a>
-							<a href="#"><h5>Genre</h5></a></li>
-
-							<li><h2>Pressure</h2>
-							<a href="#"><h5>Artist name |</h5></a>
-							<a href="#"><h5>Album name |</h5></a>
-							<a href="#"><h5>Genre</h5></a></li>
-						</ul> -->
+					<ul id="jams">
+					</ul>
 					</main>
 				</div>
-		</div>
-	<script type="text/javascript" src="songs.js"></script>
+				</section> <!-- list-music-view closing tag -->
+				
+				<section id="add-music-view" class="hidden">
+					<label>Song:</label>
+					<input id="song-input" type="text" name="Song Name"><br>
+					
+					<label>Artist:</label>
+					<input id="artist-input" type="text" name="Artist"><br>
+					
+					<label>Album:</label>
+					<input id="album-input" type="text" name="Album"><br>
+					
+					<button id="add-button" type="button">Add to playlist</button>
+				</section>
+		</div> <!-- main-container closing tag-->
+	<!-- <script type="text/javascript" src="javascripts/songs.js"></script> -->
+	<script type="text/javascript" src="javascripts/add.js"></script>
+	<script type="text/javascript" src="javascripts/songs-array.js"></script>
 	</body>
 </html>

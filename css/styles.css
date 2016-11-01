@@ -1,3 +1,4 @@
+/************** Layout / Positioning **************/
 #navcontainer {
 	background-color: #FFB4B0;
 	width: 80%;
@@ -12,17 +13,12 @@ nav {
 
 li {
 	display: inline;
-
 }
 
-#main_container {
+#main-container {
 	width: 80%;
 	height: 460px;
 	margin: 8px auto;
-}
-
-main h2 {
-	color: #785616;
 }
 
 #sideoptions {
@@ -57,12 +53,54 @@ main h2 {
     float: right;
     width: 74%;
     height: 460px;
+  overflow: scroll;
+}
+
+h5 {
+	display: inline;
+}
+
+/********************* Add Music View ******************/
+#add-music-view {
+	text-align: center;
+	margin: 10%;
+}
+
+#add-button {
+	margin-top: 3%;
+}
+
+#jam-list-items h3 {
+	display: inline-block;
+	padding-bottom: 2%;
+}
+
+h3 {
+ display: inline;
+}
+
+main h2 {
+	margin-bottom: 0;
+}
+
+/********************* Toggle Class ******************/
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+/******************** Decoration **********************/
+a {
+	text-decoration: none;
 }
 
 ul {
 	list-style: none;
 }
 
-h5 {
-	display: inline;
+main h2 {
+	color: #785616;
 }
