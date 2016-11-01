@@ -35,5 +35,15 @@ document.getElementById("add-button")
 									"Artist": artistInput,
 									"Album": albumInput
 		});
-		toDom();
+		addSongToDom(songInput, artistInput, albumInput);
 	};
+
+function addSongToDom (songInput, artistInput, albumInput) {
+	var songName = "<h2 class='songName'>" + songInput + "</h2>";
+	var songArtist = "<h3 class='songArtist'>" + artistInput + "</h3>"
+	var songAlbum = "<h3 class='songAlbum'>" + albumInput + "</h3>"
+	var domInjectSong = document.getElementById("jams");
+	domInjectSong.innerHTML += "<ul class='jam-list-items'>" + "<li>" + songName + "</li>" + "<br>" + "<li>" + songArtist + "</li>" + " | " + "<li>" + songAlbum + "</li>" + "</ul>";
+}
+
+
