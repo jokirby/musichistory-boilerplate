@@ -1,6 +1,10 @@
+"use strict";
+var Apple = (function(rottenApple) {
+	let songs = rottenApple.getSongs();
+
 ///////////- NAV BAR LINKS -////////////
-var homeLink = document.getElementById("link-home");
-var homeView = document.getElementById("list-music-view");
+let homeLink = document.getElementById("link-home");
+let homeView = document.getElementById("list-music-view");
 
 homeLink.addEventListener("click", function() {
   addView.classList.add("hidden");
@@ -10,8 +14,8 @@ homeLink.addEventListener("click", function() {
 
 });
 
-var addLink = document.getElementById("link-add");
-var addView = document.getElementById("add-music-view");
+let addLink = document.getElementById("link-add");
+let addView = document.getElementById("add-music-view");
 
 addLink.addEventListener("click", function() {
   homeView.classList.add("hidden");
@@ -22,28 +26,51 @@ addLink.addEventListener("click", function() {
 });
 
 ///////////- ADD MUSIC TO ARRAY -////////////
-document.getElementById("add-button")
-	.addEventListener("click", addSongToArray);
-
-	function addSongToArray () {
+	rottenApple.addSongToArray = function () {
 		var songInput = document.getElementById("song-input").value;
 		var artistInput = document.getElementById("artist-input").value;
 		var albumInput = document.getElementById("album-input").value;
-		// console.log("albumInput", albumInput, typeof albumInput);
 
+		if (songInput && artistInput && albumInput) {
 		songs.push({ 	"Song": songInput,
 									"Artist": artistInput,
 									"Album": albumInput
 		});
-		addSongToDom(songInput, artistInput, albumInput);
+		rottenApple.addSongToDom(songInput, artistInput, albumInput);
+		rottenApple.setSongs(songs);
+		rottenApple.alertSongAdded(songInput);
+		rottenApple.eraseInput(songInput, artistInput, albumInput);
+	} else {
+		document.getElementById("alert-add").innerHTML = "Missing input";
+		return;
+	}
 	};
 
-function addSongToDom (songInput, artistInput, albumInput) {
-	var songName = "<h2 class='songName'>" + songInput + "</h2>";
-	var songArtist = "<h3 class='songArtist'>" + artistInput + "</h3>"
-	var songAlbum = "<h3 class='songAlbum'>" + albumInput + "</h3>"
-	var domInjectSong = document.getElementById("jams");
-	domInjectSong.innerHTML += "<ul class='jam-list-items'>" + "<li>" + songName + "</li>" + "<br>" + "<li>" + songArtist + "</li>" + " | " + "<li>" + songAlbum + "</li>" + "</ul>";
-}
+rottenApple.addSongToDom = function(songInput, artistInput, albumInput) {
+	console.log("addSongToDom is running");
+	let songName = "<h2 class='songName'>" + songInput + "</h2>";
+	let songArtist = "<h3 class='songArtist'>" + artistInput + "</h3>";
+	let songAlbum = "<h3 class='songAlbum'>" + albumInput + "</h3>";
+	let domInjectSong = document.getElementById("jams");
+	domInjectSong.innerHTML += "<ul class='jam-list-items'>" + "<li>" + songName + "</li>" + "<br>" + "<li>" + songArtist + "</li>" + " | " + "<li>" + songAlbum + "</li>" + "<button type='button' class='deleteMe'>DELETE</button>" + "</ul>";
+};
+
+rottenApple.alertSongAdded = function(songName) {
+	document.getElementById("alert-add").innerHTML = "'"+ songName + "'" + " was added to your playlist";
+};
+
+rottenApple.eraseInput = function(songInput, artistInput, albumInput) {
+	console.log("yoyoyoyo");
+	songInput = "";
+	artistInput = "";
+	albumInput = "";
+};
+
+ return rottenApple;
+
+})(Apple || {});
+
+// Apple.loadSongs(Apple.jsonSongs);
+// Apple.loadSongs(rottenApple.jsonSongs); //-----------> Calling Function
 
 

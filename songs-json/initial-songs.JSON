@@ -1,0 +1,22 @@
+{
+	"Songs": [{
+		"Artist": "Royal Canoe",
+		"Song": "Exodus of the Year",
+		"Album": "Today We're Believers"
+		},
+		{
+		"Artist": "Phox",
+		"Song": "1936",
+		"Album": "Phox"
+		},
+		{
+		"Artist": "Queen",
+		"Song": "Under Pressure",
+		"Album": "Live at the Rainbow '74"
+		},
+		{
+			"Artist": "roco",
+			"Album": "Pidgin Tongue",
+			"Song": "Bloody Hands"
+		}]
+}

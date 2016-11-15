@@ -1,0 +1,142 @@
+/************** Layout / Positioning **************/
+#navcontainer {
+	background-color: #FFB4B0;
+	width: 80%;
+	height: 10%;
+	border: solid 2px black;
+	margin: 8px auto;
+}
+
+nav {
+	text-align: left;
+}
+
+li {
+	display: inline;
+}
+
+#main-container {
+	width: 80%;
+	height: 460px;
+	margin: 8px auto;
+}
+
+#sideoptions {
+	background-color: #4DD7FA;
+	border: solid 2px black;
+	width: 22%;
+	float: left;
+	padding: 1%;
+	height: 440px;
+}
+
+#formcontainer {
+	width: 90%;
+	text-align: center;
+}
+
+#row1 {
+	float:left;
+	width: 45%;
+	display: inline-block;
+}
+
+#row2 {
+	width: 45%;
+	display: inline-block;
+}
+
+
+#mdisplay {
+	background-color: #FEFAC0;
+	border: solid 2px black;
+    float: right;
+    width: 74%;
+    height: 460px;
+  overflow: scroll;
+}
+
+h5 {
+	display: inline;
+}
+
+/********************* Add Music View ******************/
+#add-music-view {
+	text-align: center;
+	margin: 10%;
+}
+
+#add-button {
+	margin-top: 3%;
+}
+
+#jam-list-items h3 {
+	display: inline-block;
+	padding-bottom: 2%;
+}
+
+h3 {
+ display: inline;
+}
+
+main h2 {
+	margin-bottom: 0;
+}
+
+/********************* Toggle Class ******************/
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+/******************** Decoration **********************/
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+main h2 {
+	color: #785616;
+}
+
+.deleteMe {
+  border-radius: 15px;
+  color: white;
+  background-color: #4DD7FA; 
+  margin-left: 5%;
+  font-size: 10px;
+  font-family: sans-serif;
+  -webkit-transition-duration: 0.2s;
+  /* Safari */
+  transition-duration: 0.2s;
+  cursor: pointer;
+  cursor: hand; }
+
+.deleteMe:hover {
+  color: lightgrey;
+}
+
+#more-button {
+  background-color: #FFB4B0;
+  border-radius: 15px;
+  font-size: 10px;
+  font-family: sans-serif;
+  -webkit-transition-duration: 0.2s;
+  /* Safari */
+  transition-duration: 0.2s;
+  cursor: pointer;
+  cursor: hand; 
+  margin-left: 33%;
+  margin-top: 5%;
+  width: 33%;
+}
+
+#more-button:hover {
+  color: lightgrey;
+}

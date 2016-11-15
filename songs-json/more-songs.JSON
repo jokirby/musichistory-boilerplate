@@ -1,0 +1,22 @@
+{
+	"Songs": [{
+			"Artist": "Saintseneca",
+			"Album": "Such Things",
+			"Song": "Sleeper Hold"
+		},
+		{
+			"Artist": "Grizzly Bear",
+			"Album": "Shields",
+			"Song": "Yet Again"
+		},
+		{
+			"Artist": "Flying Lotus",
+			"Album": "Until The Quiet Comes",
+			"Song": "See Thru To U"
+		},
+		{
+			"Artist": "Hiatus Kaiyote",
+			"Album": "Choose Your Weapon",
+			"Song": "Shaolin Monk Motherfunk"
+		}]
+}

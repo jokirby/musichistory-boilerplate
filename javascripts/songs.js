@@ -1,3 +1,5 @@
+"use strict";
+
 var songs = [];
 
 songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
@@ -20,7 +22,7 @@ console.log(newSongs);
 // var currentSong = newSongs[i];
 // debugger;
 
-domInjectSong.innerHTML += "<li class='jam-list-items'>" + "<h4>" + newSongs + "</h4>" + "</li>"
+domInjectSong.innerHTML += "<li class='jam-list-items'>" + "<h4>" + newSongs + "</h4>" + "</li>";
 // console.log("inner", domInjectSong.innerHTML);
 
-};
+}

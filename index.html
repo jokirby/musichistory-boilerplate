@@ -7,7 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 	</head>
 	
-	<body onload="toDom();">
+	<body> <!-- onload="toDom();" -->
 		<header>
 			<div id="navcontainer">
 				<nav>
@@ -70,10 +70,12 @@
 					<ul id="jams">
 					</ul>
 					</main>
+				<button id="more-button" type="button">More</button>
 				</div>
 				</section> <!-- list-music-view closing tag -->
 				
 				<section id="add-music-view" class="hidden">
+					<div id="alert-add"></div>
 					<label>Song:</label>
 					<input id="song-input" type="text" name="Song Name"><br>
 					
@@ -86,8 +88,12 @@
 					<button id="add-button" type="button">Add to playlist</button>
 				</section>
 		</div> <!-- main-container closing tag-->
+
 	<!-- <script type="text/javascript" src="javascripts/songs.js"></script> -->
+	<script type="text/javascript" src="javascripts/loader.js"></script>
 	<script type="text/javascript" src="javascripts/add.js"></script>
-	<script type="text/javascript" src="javascripts/songs-array.js"></script>
+	<script type="text/javascript" src="javascripts/more.js"></script>
+	<script type="text/javascript" src="javascripts/main.js"></script>
+	<!-- <script type="text/javascript" src="javascripts/songs-array.js"></script> -->
 	</body>
 </html>
