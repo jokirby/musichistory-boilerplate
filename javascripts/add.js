@@ -3,33 +3,32 @@ var Apple = (function(rottenApple) {
 	let songs = rottenApple.getSongs();
 
 ///////////- NAV BAR LINKS -////////////
-let homeLink = document.getElementById("link-home");
-let homeView = document.getElementById("list-music-view");
+let homeLink = $("#link-home");
+let homeView = $("#list-music-view");
 
-homeLink.addEventListener("click", function() {
-  addView.classList.add("hidden");
+homeLink.click( function() {
+  addView.addClass("hidden");
 
-  homeView.classList.remove("hidden");
-  homeView.classList.add("visible");
-
+  homeView.removeClass("hidden");
+  homeView.addClass("visible");
 });
 
-let addLink = document.getElementById("link-add");
-let addView = document.getElementById("add-music-view");
+let addLink = $("#link-add");
+let addView = $("#add-music-view");
 
-addLink.addEventListener("click", function() {
-  homeView.classList.add("hidden");
+addLink.click( function() {
+  homeView.addClass("hidden");
 
-  addView.classList.remove("hidden");
-  addView.classList.add("visible");
+  addView.removeClass("hidden");
+  addView.addClass("visible");
 
 });
 
 ///////////- ADD MUSIC TO ARRAY -////////////
 	rottenApple.addSongToArray = function () {
-		var songInput = document.getElementById("song-input").value;
-		var artistInput = document.getElementById("artist-input").value;
-		var albumInput = document.getElementById("album-input").value;
+		var songInput = $("#song-input").val();
+		var artistInput = $("#artist-input").val();
+		var albumInput = $("#album-input").val();
 
 		if (songInput && artistInput && albumInput) {
 		songs.push({ 	"Song": songInput,
@@ -41,13 +40,13 @@ addLink.addEventListener("click", function() {
 		rottenApple.alertSongAdded(songInput);
 		rottenApple.eraseInput(songInput, artistInput, albumInput);
 	} else {
-		document.getElementById("alert-add").innerHTML = "Missing input";
+		$("#alert-add").innerHTML = "Missing input";
 		return;
 	}
 	};
 
 rottenApple.addSongToDom = function(songInput, artistInput, albumInput) {
-	console.log("addSongToDom is running");
+	// console.log("addSongToDom is running");
 	let songName = "<h2 class='songName'>" + songInput + "</h2>";
 	let songArtist = "<h3 class='songArtist'>" + artistInput + "</h3>";
 	let songAlbum = "<h3 class='songAlbum'>" + albumInput + "</h3>";
@@ -56,11 +55,11 @@ rottenApple.addSongToDom = function(songInput, artistInput, albumInput) {
 };
 
 rottenApple.alertSongAdded = function(songName) {
-	document.getElementById("alert-add").innerHTML = "'"+ songName + "'" + " was added to your playlist";
+	$("#alert-add").html("'"+ songName + "'" + " was added to your playlist");
 };
 
 rottenApple.eraseInput = function(songInput, artistInput, albumInput) {
-	console.log("yoyoyoyo");
+	// console.log("yoyoyoyo");
 	songInput = "";
 	artistInput = "";
 	albumInput = "";

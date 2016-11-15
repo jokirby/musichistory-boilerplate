@@ -3,20 +3,13 @@
 var Apple = (function(rottenApple) {
 	let songs = [];
 
-	rottenApple.loadSongs = function(callBack) {
-		console.log("loadSongs is running");
-		let request = new XMLHttpRequest();
-		request.open("GET", "songs-json/initial-songs.JSON");
-		request.send();
-
-		request.addEventListener("load", function() {
-			let songsData = JSON.parse(this.responseText).Songs;
-			callBack(songsData);
-		});
-	};
+  $.ajax({
+    url: "songs-json/initial-songs.JSON"
+    }).done(function(songsData) {
+      rottenApple.jsonSongs(songsData.Songs);
+    });
 
   rottenApple.jsonSongs = function(songsData) {
-  	console.log("jsonSongs is running");
     for (var key in songsData) {
       songs.push(songsData[key]);
     }
@@ -24,7 +17,6 @@ var Apple = (function(rottenApple) {
   };
 
   rottenApple.outputToWindow = function(songs) {
-  	console.log("outputToWindow is running");
   	let domInjectSong = document.getElementById("jams");
   	for (var i = 0; i < songs.length; i++) {
 		let currentSong = songs[i];
@@ -47,4 +39,4 @@ var Apple = (function(rottenApple) {
 
 })(Apple || {});
 
-Apple.loadSongs(Apple.jsonSongs);
+// Apple.loadSongs(Apple.jsonSongs);
