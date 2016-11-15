@@ -50,8 +50,8 @@ rottenApple.addSongToDom = function(songInput, artistInput, albumInput) {
 	let songName = "<h2 class='songName'>" + songInput + "</h2>";
 	let songArtist = "<h3 class='songArtist'>" + artistInput + "</h3>";
 	let songAlbum = "<h3 class='songAlbum'>" + albumInput + "</h3>";
-	let domInjectSong = document.getElementById("jams");
-	domInjectSong.innerHTML += "<ul class='jam-list-items'>" + "<li>" + songName + "</li>" + "<br>" + "<li>" + songArtist + "</li>" + " | " + "<li>" + songAlbum + "</li>" + "<button type='button' class='deleteMe'>DELETE</button>" + "</ul>";
+	let domInjectSong = $("#jams");
+	domInjectSong.append("<ul class='jam-list-items'>" + "<li>" + songName + "</li>" + "<br>" + "<li>" + songArtist + "</li>" + " | " + "<li>" + songAlbum + "</li>" + "<button type='button' class='deleteMe'>DELETE</button>" + "</ul>");
 };
 
 rottenApple.alertSongAdded = function(songName) {
