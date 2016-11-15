@@ -87,7 +87,7 @@ main h2 {
 .deleteMe {
   border-radius: 15px;
   color: white;
-  background-color: #4DD7FA;
+  background-color: #4DD7FA; 
   margin-left: 5%;
   font-size: 10px;
   font-family: sans-serif;
@@ -98,7 +98,8 @@ main h2 {
   cursor: hand; }
 
 .deleteMe:hover {
-  color: lightgrey; }
+  color: lightgrey;
+}
 
 #more-button {
   background-color: #FFB4B0;
@@ -109,12 +110,19 @@ main h2 {
   /* Safari */
   transition-duration: 0.2s;
   cursor: pointer;
-  cursor: hand;
+  cursor: hand; 
   margin-left: 33%;
   margin-top: 5%;
-  width: 33%; }
+  width: 33%;
+}
 
 #more-button:hover {
-  color: lightgrey; }
+  color: lightgrey;
+}
+
+#alert-add {
+  margin-bottom: 3%;
+  color: #FFB4B0;
+}
 
 /*# sourceMappingURL=styles.css.map */
